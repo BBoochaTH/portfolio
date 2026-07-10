@@ -1,44 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | หน้าหลัก</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | หน้าหลัก</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- เมนู -->
-    <nav>
-        <div class="logo">Portfolio</div>
-        <ul>
-            <li><a href="index.html" class="active">หน้าหลัก</a></li>
-            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-            <li><a href="education.html">ประวัติการศึกษา</a></li>
-            <li><a href="portfolio.html">ผลงานและกิจกรรม</a></li>
-            <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
-        </ul>
-    </nav>
-
-    <!-- หน้าหลัก -->
-    <section class="home">
-
-        <div class="card">
-
-            <img src="images/profile.jpg" alt="รูปโปรไฟล์" class="profile">
-
-            <h1>ธนพล บูชา</h1>
-
-            <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
-
-            <p>นักเรียนโรงเรียนพานทอง</p>
-
-            <a href="profile.html" class="btn">ดูประวัติส่วนตัว</a>
+<style>
 *{
     margin:0;
     padding:0;
@@ -47,7 +16,7 @@
 }
 
 body{
-    background:#FFF8FB;
+    background:#FFF7FA;
     color:#555;
 }
 
@@ -58,6 +27,7 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:15px 60px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 .logo{
@@ -67,143 +37,161 @@ nav{
 }
 
 nav ul{
-    list-style:none;
     display:flex;
+    list-style:none;
 }
 
 nav ul li{
-    margin-left:20px;
+    margin-left:25px;
 }
 
 nav ul li a{
     text-decoration:none;
     color:white;
-    font-weight:500;
-    transition:.3s;
+    font-size:18px;
+    transition:0.3s;
 }
 
-nav ul li a:hover,
-.active{
+nav ul li a:hover{
     color:#C2185B;
 }
 
 /* หน้าหลัก */
-
 .home{
+    height:85vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:85vh;
 }
 
 .card{
-
     background:white;
     width:420px;
     padding:40px;
-    border-radius:20px;
     text-align:center;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
     animation:fade 1s;
 }
 
 .profile{
-
     width:180px;
     height:180px;
-    object-fit:cover;
-
     border-radius:50%;
-
+    object-fit:cover;
     border:6px solid #F8BBD0;
-
     margin-bottom:20px;
 }
 
 h1{
-
     color:#E91E63;
-
     margin-bottom:10px;
 }
 
 h2{
-
-    font-size:22px;
-
     color:#666;
-
+    font-weight:400;
     margin-bottom:10px;
 }
 
 p{
-
+    font-size:18px;
     margin-bottom:30px;
 }
 
 .btn{
-
     display:inline-block;
-
-    text-decoration:none;
-
     background:#F8BBD0;
-
     color:white;
-
+    text-decoration:none;
     padding:12px 30px;
-
     border-radius:30px;
-
-    transition:.3s;
+    transition:0.3s;
 }
 
 .btn:hover{
-
     background:#EC6C9E;
-
     transform:scale(1.05);
 }
 
 footer{
-
-    text-align:center;
-
     background:#F8BBD0;
-
     color:white;
-
+    text-align:center;
     padding:15px;
 }
 
 @keyframes fade{
-
     from{
-
         opacity:0;
-
         transform:translateY(30px);
-
     }
-
     to{
-
         opacity:1;
-
         transform:translateY(0);
-
     }
-
 }
-        </div>
 
-    </section>
+/* Responsive */
+@media(max-width:768px){
 
-    <footer>
-        © 2026 Portfolio | Thanaphon Bucha
-    </footer>
+nav{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    margin-top:10px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.card{
+    width:90%;
+}
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+    <div class="logo">Portfolio</div>
+
+    <ul>
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+        <li><a href="education.html">ประวัติการศึกษา</a></li>
+        <li><a href="portfolio.html">ผลงานและกิจกรรม</a></li>
+        <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+
+    <div class="card">
+
+        <img src="images/profile.jpg" alt="รูปโปรไฟล์" class="profile">
+
+        <h1>ธนพล บูชา</h1>
+
+        <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+
+        <p>นักเรียนโรงเรียนพานทอง</p>
+
+        <a href="profile.html" class="btn">ดูประวัติส่วนตัว</a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Portfolio | Thanaphon Bucha
+</footer>
 
 </body>
 </html>
