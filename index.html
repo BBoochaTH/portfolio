@@ -6,7 +6,13 @@
 <title>Portfolio | หน้าหลัก</title>
 
 <style>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
+
 /* พื้นหลังเคลื่อนไหว */
 body{
     background: linear-gradient(
@@ -16,8 +22,8 @@ body{
         #F8BBD0,
         #FFD6E7
     );
-    background-size: 400% 400%;
-    animation: gradientBG 12s ease infinite;
+    background-size:400% 400%;
+    animation:gradientBG 8s ease infinite;
     color:#555;
 }
 
@@ -47,40 +53,73 @@ body{
 .bubbles span{
     position:absolute;
     display:block;
-    width:60px;
-    height:60px;
-    background:rgba(255,255,255,0.25);
+    width:100px;
+    height:100px;
+    background:rgba(255,255,255,0.7);
+    border:2px solid rgba(255,255,255,0.8);
+    backdrop-filter:blur(3px);
     border-radius:50%;
-    animation: float 15s linear infinite;
+    animation:float 6s linear infinite;
 }
 
 .bubbles span:nth-child(1){
-    left:10%;
-    animation-duration:12s;
+    left:5%;
+    animation-duration:5s;
 }
 
 .bubbles span:nth-child(2){
-    left:30%;
-    width:80px;
-    height:80px;
-    animation-duration:18s;
+    left:15%;
+    width:120px;
+    height:120px;
+    animation-duration:7s;
 }
 
 .bubbles span:nth-child(3){
-    left:50%;
-    animation-duration:14s;
+    left:25%;
+    animation-duration:6s;
 }
 
 .bubbles span:nth-child(4){
-    left:70%;
-    width:100px;
-    height:100px;
-    animation-duration:20s;
+    left:35%;
+    width:140px;
+    height:140px;
+    animation-duration:8s;
 }
 
 .bubbles span:nth-child(5){
-    left:90%;
-    animation-duration:16s;
+    left:45%;
+    animation-duration:5s;
+}
+
+.bubbles span:nth-child(6){
+    left:55%;
+    width:110px;
+    height:110px;
+    animation-duration:7s;
+}
+
+.bubbles span:nth-child(7){
+    left:65%;
+    animation-duration:6s;
+}
+
+.bubbles span:nth-child(8){
+    left:75%;
+    width:130px;
+    height:130px;
+    animation-duration:8s;
+}
+
+.bubbles span:nth-child(9){
+    left:85%;
+    animation-duration:5s;
+}
+
+.bubbles span:nth-child(10){
+    left:95%;
+    width:120px;
+    height:120px;
+    animation-duration:7s;
 }
 
 @keyframes float{
@@ -94,176 +133,19 @@ body{
     }
 
     100%{
-        transform:translateY(-150px);
+        transform:translateY(-200px);
         opacity:0;
     }
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Kanit',sans-serif;
-}
-body{
-    background:linear-gradient(
-        135deg,
-        #FFF7FA,
-        #FFE4EC
-    );
-    color:#555;
-}
-/* เมนู */
-nav{
-    background:#F8BBD0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:white;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:25px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-size:18px;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#C2185B;
-}
-
-/* หน้าหลัก */
-.home{
-    height:85vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.card{
-    background:white;
-    width:420px;
-    padding:40px;
-    text-align:center;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    animation:fade 1s;
-}
-
-.profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid #F8BBD0;
-    margin-bottom:20px;
-}
-
-h1{
-    color:#ff6b9d;
-    margin-bottom:10px;
-}
-.school{
-    font-size:22px;
-    font-weight:500;
-    color:#666;
-    margin-bottom:8px;
-}
-h2{
-    color:#666;
-    font-weight:400;
-    margin-bottom:5px;
-}
-h3{
-    color:#666;
-    font-weight:400;
-    margin-bottom:10px;
-}
-    h4{
-    color:#666;
-    font-weight:400;
-    margin-bottom:10px;
-}
-p{
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    background:#F8BBD0;
-    color:white;
-    text-decoration:none;
-    padding:12px 30px;
-    border-radius:30px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#EC6C9E;
-    transform:scale(1.05);
-}
-
-footer{
-    background:#F8BBD0;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-@keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-    padding:20px;
-}
-
-nav ul{
-    flex-direction:column;
-    text-align:center;
-    margin-top:10px;
-}
-
-nav ul li{
-    margin:10px 0;
-}
-
-.card{
-    width:90%;
-}
 }
 </style>
 
 </head>
 <body><div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
     <span></span>
     <span></span>
     <span></span>
@@ -275,9 +157,9 @@ nav ul li{
 
     <ul>
         <li><a href="index.html"class="active">หน้าหลัก</a></li>
-        <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+        <li><a href="personal.html">ประวัติส่วนตัว</a></li>
         <li><a href="education.html">ประวัติการศึกษา</a></li>
-        <li><a href="portfolio.html">ผลงานและกิจกรรม</a></li>
+        <li><a href="activities.html">ผลงานและกิจกรรม</a></li>
         <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
     </ul>
 </nav>
@@ -286,7 +168,7 @@ nav ul li{
 
     <div class="card">
 
-        <img src="images/profile.jpg" alt="รูปโปรไฟล์" class="profile">
+        <img src="Images/profile.jpg" alt="รูปโปรไฟล์" class="profile">
     <h3> welcome to my portfolio</h3>
         
         <h1>ธนพล บูชา</h1>
@@ -295,7 +177,7 @@ nav ul li{
         <h4>แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์</h4>
         <p class="school">โรงเรียนพานทอง</p>
 
-        <a href="profile.html" class="btn">ดูประวัติส่วนตัว</a>
+        <a href="personal.html" class="btn">ดูประวัติส่วนตัว</a>
 
     </div>
 
