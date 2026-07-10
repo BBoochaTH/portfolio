@@ -39,7 +39,164 @@
             <p>นักเรียนโรงเรียนพานทอง</p>
 
             <a href="profile.html" class="btn">ดูประวัติส่วนตัว</a>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
 
+body{
+    background:#FFF8FB;
+    color:#555;
+}
+
+/* เมนู */
+nav{
+    background:#F8BBD0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+.active{
+    color:#C2185B;
+}
+
+/* หน้าหลัก */
+
+.home{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:85vh;
+}
+
+.card{
+
+    background:white;
+    width:420px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    animation:fade 1s;
+}
+
+.profile{
+
+    width:180px;
+    height:180px;
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #F8BBD0;
+
+    margin-bottom:20px;
+}
+
+h1{
+
+    color:#E91E63;
+
+    margin-bottom:10px;
+}
+
+h2{
+
+    font-size:22px;
+
+    color:#666;
+
+    margin-bottom:10px;
+}
+
+p{
+
+    margin-bottom:30px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#F8BBD0;
+
+    color:white;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    background:#EC6C9E;
+
+    transform:scale(1.05);
+}
+
+footer{
+
+    text-align:center;
+
+    background:#F8BBD0;
+
+    color:white;
+
+    padding:15px;
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
         </div>
 
     </section>
