@@ -1,1 +1,131 @@
+<section class="about">
 
+    <div class="about-card">
+
+        <img src="images/profile.jpg" alt="รูปโปรไฟล์" class="profile-img">
+
+        <h1>ธนพล บูชา</h1>
+
+        <p class="subtitle">นักเรียนชั้นมัธยมศึกษาปีที่ 6 โรงเรียนพานทอง</p>
+
+        <div class="info">
+
+            <div class="info-item">
+                <span>🎂 วันเกิด</span>
+                <p>วันจันทร์ที่ 13 เมษายน 2552</p>
+            </div>
+
+            <div class="info-item">
+                <span>👤 อายุ</span>
+                <p>17 ปี</p>
+            </div>
+
+            <div class="info-item">
+                <span>🎵 งานอดิเรก</span>
+                <p>อ่านหนังสือ • ดูหนัง • ฟังเพลง</p>
+            </div>
+
+        </div>
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                ฟัง พูด อ่าน เขียน ภาษาอังกฤษ
+            </div>
+
+            <div class="skill">
+                มีความเป็นผู้นำ
+            </div>
+
+            <div class="skill">
+                กล้าตัดสินใจในสถานการณ์ที่ท้าทาย
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+.about{
+    display:flex;
+    justify-content:center;
+    padding:50px 20px;
+}
+
+.about-card{
+    width:700px;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #F8BBD0;
+    margin-bottom:20px;
+}
+
+.about-card h1{
+    color:#ff6b9d;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#777;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.info{
+    text-align:left;
+    margin-bottom:30px;
+}
+
+.info-item{
+    background:#FFF7FA;
+    padding:15px 20px;
+    margin-bottom:12px;
+    border-radius:12px;
+}
+
+.info-item span{
+    font-weight:600;
+    color:#EC6C9E;
+}
+
+.info-item p{
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+.about-card h2{
+    color:#ff6b9d;
+    margin-bottom:20px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#F8BBD0;
+    color:white;
+    padding:12px 20px;
+    border-radius:30px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:scale(1.05);
+}
