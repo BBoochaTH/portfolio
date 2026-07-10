@@ -1,53 +1,71 @@
-<section class="about">
+<!DOCTYPE html>
+<html lang="th">
 
-    <div class="about-card">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <img src="images/profile.jpg" alt="รูปโปรไฟล์" class="profile-img">
+<title>ประวัติส่วนตัว</title>
 
-        <h1>ธนพล บูชา</h1>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
-        <p class="subtitle">นักเรียนชั้นมัธยมศึกษาปีที่ 6 โรงเรียนพานทอง</p>
+<style>
 
-        <div class="info">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
 
-            <div class="info-item">
-                <span>🎂 วันเกิด</span>
-                <p>วันจันทร์ที่ 13 เมษายน 2552</p>
-            </div>
+body{
+    background:#FFF7FA;
+    color:#555;
+}
 
-            <div class="info-item">
-                <span>👤 อายุ</span>
-                <p>17 ปี</p>
-            </div>
+/* เมนู */
+nav{
+    background:#F8BBD0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
 
-            <div class="info-item">
-                <span>🎵 งานอดิเรก</span>
-                <p>อ่านหนังสือ • ดูหนัง • ฟังเพลง</p>
-            </div>
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
 
-        </div>
+nav ul{
+    display:flex;
+    list-style:none;
+}
 
-        <h2>Skills</h2>
+nav ul li{
+    margin-left:25px;
+}
 
-        <div class="skills">
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
 
-            <div class="skill">
-                ฟัง พูด อ่าน เขียน ภาษาอังกฤษ
-            </div>
+nav ul li a:hover{
+    color:#C2185B;
+}
 
-            <div class="skill">
-                มีความเป็นผู้นำ
-            </div>
+.active{
+    color:#C2185B;
+    font-weight:bold;
+}
 
-            <div class="skill">
-                กล้าตัดสินใจในสถานการณ์ที่ท้าทาย
-            </div>
+/* About Me */
 
-        </div>
-
-    </div>
-
-</section>
 .about{
     display:flex;
     justify-content:center;
@@ -102,7 +120,6 @@
 
 .info-item p{
     margin-top:5px;
-    margin-bottom:0;
 }
 
 .about-card h2{
@@ -129,3 +146,118 @@
 .skill:hover{
     transform:scale(1.05);
 }
+
+footer{
+    background:#F8BBD0;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    margin-top:10px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.about-card{
+    width:95%;
+    padding:25px;
+}
+
+.profile-img{
+    width:150px;
+    height:150px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Portfolio</div>
+
+<ul>
+<li><a href="index.html">หน้าหลัก</a></li>
+<li><a href="personal.html" class="active">ประวัติส่วนตัว</a></li>
+<li><a href="education.html">ประวัติการศึกษา</a></li>
+<li><a href="activities.html">ผลงานและกิจกรรม</a></li>
+<li><a href="contact.html">ช่องทางการติดต่อ</a></li>
+</ul>
+
+</nav>
+
+<section class="about">
+
+<div class="about-card">
+
+<img src="Images/profile.jpg" alt="รูปโปรไฟล์" class="profile-img">
+
+<h1>ธนพล บูชา</h1>
+
+<p class="subtitle">
+นักเรียนชั้นมัธยมศึกษาปีที่ 6 โรงเรียนพานทอง
+</p>
+
+<div class="info">
+
+<div class="info-item">
+<span>🎂 วันเกิด</span>
+<p>วันจันทร์ที่ 13 เมษายน 2552</p>
+</div>
+
+<div class="info-item">
+<span>👤 อายุ</span>
+<p>17 ปี</p>
+</div>
+
+<div class="info-item">
+<span>🎵 งานอดิเรก</span>
+<p>อ่านหนังสือ • ดูหนัง • ฟังเพลง</p>
+</div>
+
+</div>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+ฟัง พูด อ่าน เขียน ภาษาอังกฤษ
+</div>
+
+<div class="skill">
+มีความเป็นผู้นำ
+</div>
+
+<div class="skill">
+กล้าตัดสินใจในสถานการณ์ที่ท้าทาย
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Portfolio | Thanaphon Bucha
+</footer>
+
+</body>
+</html>
