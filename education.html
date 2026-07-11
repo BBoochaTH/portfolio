@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Education | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #F4F9FF,
+        #EAF4FF,
+        #DDEEFF
+    );
+    color:#444;
+}
+
+/* Header */
+
+.header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:70px;
+    color:#3D7EFF;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:24px;
+    color:#666;
+}
+
+/* Timeline */
+
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+    padding:30px 0 80px;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    background:#6AA9FF;
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left:-3px;
+    border-radius:10px;
+}
+
+.container{
+    position:relative;
+    width:50%;
+    padding:20px 50px;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    left:50%;
+}
+
+.container::after{
+    content:'';
+    position:absolute;
+    width:26px;
+    height:26px;
+    background:#3D7EFF;
+    border:5px solid white;
+    border-radius:50%;
+    top:40px;
+    z-index:1;
+}
+
+.left::after{
+    right:-16px;
+}
+
+.right::after{
+    left:-16px;
+}
+
+.content{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(61,126,255,0.15);
+}
+
+.content h2{
+    color:#3D7EFF;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.content p{
+    line-height:2;
+    font-size:20px;
+}
+
+/* Footer */
+
+footer{
+    background:#6AA9FF;
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+.timeline::after{
+    left:30px;
+}
+
+.container{
+    width:100%;
+    padding-left:70px;
+    padding-right:20px;
+}
+
+.right{
+    left:0;
+}
+
+.left::after,
+.right::after{
+    left:18px;
+}
+
+.header h1{
+    font-size:50px;
+}
+
+.content h2{
+    font-size:24px;
+}
+
+.content p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🎓 Education</h1>
+    <p>ประวัติการศึกษา</p>
+</div>
+
+<div class="timeline">
+
+    <div class="container left">
+        <div class="content">
+            <h2>📚 ประถมศึกษา</h2>
+            <p>
+                <strong>โรงเรียน :</strong> วัดท้องคุ้ง "ไพโรจน์ประชาสรรค์"<br>
+                <strong>ปีการศึกษา :</strong> 2558 - 2563
+            </p>
+        </div>
+    </div>
+
+    <div class="container right">
+        <div class="content">
+            <h2>🎒 มัธยมศึกษาตอนต้น</h2>
+            <p>
+                <strong>โรงเรียน :</strong> วัดท้องคุ้ง "ไพโรจน์ประชาสรรค์"<br>
+                <strong>แผนการเรียน :</strong> หลักสูตรการศึกษาขั้นพื้นฐาน<br>
+                <strong>ปีการศึกษา :</strong> 2564 - 2566
+            </p>
+        </div>
+    </div>
+
+    <div class="container left">
+        <div class="content">
+            <h2>🧪 มัธยมศึกษาตอนปลาย</h2>
+            <p>
+                <strong>โรงเรียน :</strong> โรงเรียนพานทอง<br>
+                <strong>แผนการเรียน :</strong> วิทยาศาสตร์ - คณิตศาสตร์<br>
+                <strong>ปีการศึกษา :</strong> 2567 - 2569
+            </p>
+        </div>
+    </div>
+
+    <div class="container right">
+        <div class="content">
+            <h2>🎯 เป้าหมายการศึกษาต่อ</h2>
+            <p>
+                <strong>คณะ :</strong> วิศวกรรมศาสตร์<br>
+                <strong>สาขา :</strong> วิศวกรรมเคมี<br>
+                <strong>มหาวิทยาลัย :</strong> จุฬาลงกรณ์มหาวิทยาลัย
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Portfolio | Thanaphon Boocha
+</footer>
+
+</body>
+</html>
