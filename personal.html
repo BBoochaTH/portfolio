@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -18,24 +17,39 @@
     font-family:'Kanit',sans-serif;
 }
 
+/* พื้นหลัง */
 body{
-    background:#FFF7FA;
-    color:#555;
+    background:linear-gradient(
+        -45deg,
+        #F5F9FF,
+        #D6E9FF,
+        #A7D8FF,
+        #EAF4FF
+    );
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
+    color:#444;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 /* เมนู */
 nav{
-    background:#F8BBD0;
+    background:#2E86DE;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 60px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
 .logo{
     font-size:28px;
-    font-weight:bold;
+    font-weight:600;
     color:white;
 }
 
@@ -52,78 +66,82 @@ nav ul li a{
     text-decoration:none;
     color:white;
     font-size:18px;
-    transition:0.3s;
+    transition:.3s;
 }
 
 nav ul li a:hover{
-    color:#C2185B;
+    color:#D6E9FF;
 }
 
 .active{
-    color:#C2185B;
-    font-weight:bold;
+    color:#D6E9FF;
+    font-weight:600;
 }
 
-/* About Me */
-
+/* ส่วนประวัติ */
 .about{
     display:flex;
     justify-content:center;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 .about-card{
-    width:700px;
+    width:800px;
     background:white;
-    border-radius:25px;
-    padding:40px;
+    border-radius:30px;
+    padding:45px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .profile-img{
-    width:180px;
-    height:180px;
+    width:200px;
+    height:200px;
     border-radius:50%;
     object-fit:cover;
-    border:6px solid #F8BBD0;
+    border:6px solid #A7D8FF;
     margin-bottom:20px;
 }
 
 .about-card h1{
-    color:#ff6b9d;
+    color:#1E3A5F;
     margin-bottom:10px;
 }
 
 .subtitle{
-    color:#777;
+    color:#666;
     font-size:18px;
     margin-bottom:30px;
 }
 
+/* กล่องข้อมูล */
 .info{
     text-align:left;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 .info-item{
-    background:#FFF7FA;
-    padding:15px 20px;
-    margin-bottom:12px;
-    border-radius:12px;
+    background:#F5F9FF;
+    border-left:5px solid #2E86DE;
+    padding:18px 20px;
+    border-radius:15px;
+    margin-bottom:15px;
 }
 
 .info-item span{
+    color:#2E86DE;
     font-weight:600;
-    color:#EC6C9E;
+    font-size:18px;
 }
 
 .info-item p{
-    margin-top:5px;
+    margin-top:8px;
+    color:#555;
 }
 
+/* Skills */
 .about-card h2{
-    color:#ff6b9d;
+    color:#1E3A5F;
     margin-bottom:20px;
 }
 
@@ -135,26 +153,28 @@ nav ul li a:hover{
 }
 
 .skill{
-    background:#F8BBD0;
+    background:#2E86DE;
     color:white;
-    padding:12px 20px;
+    padding:14px 22px;
     border-radius:30px;
-    font-size:16px;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .skill:hover{
-    transform:scale(1.05);
+    background:#1E3A5F;
+    transform:translateY(-3px);
 }
 
+/* Footer */
 footer{
-    background:#F8BBD0;
+    background:#2E86DE;
     color:white;
     text-align:center;
     padding:15px;
-    margin-top:40px;
+    margin-top:30px;
 }
 
+/* มือถือ */
 @media(max-width:768px){
 
 nav{
@@ -164,7 +184,6 @@ nav{
 
 nav ul{
     flex-direction:column;
-    text-align:center;
     margin-top:10px;
 }
 
@@ -174,12 +193,12 @@ nav ul li{
 
 .about-card{
     width:95%;
-    padding:25px;
+    padding:30px;
 }
 
 .profile-img{
-    width:150px;
-    height:150px;
+    width:160px;
+    height:160px;
 }
 }
 
