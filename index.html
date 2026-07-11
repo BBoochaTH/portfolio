@@ -3,19 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portfolio | หน้าหลัก</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-    *{
+
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Kanit',sans-serif;
 }
 
-/* พื้นหลัง */
+/* พื้นหลังเคลื่อนไหว */
 body{
-    background: linear-gradient(
+    background:linear-gradient(
         -45deg,
         #FFF7FA,
         #FFE4EC,
@@ -23,7 +27,7 @@ body{
         #FFD6E7
     );
     background-size:400% 400%;
-    animation:gradientBG 8s ease infinite;
+    animation:gradientBG 10s ease infinite;
     color:#555;
 }
 
@@ -42,43 +46,103 @@ body{
     height:100%;
     overflow:hidden;
     z-index:0;
+    pointer-events:none;
 }
 
 .bubbles span{
     position:absolute;
-    display:block;
-    width:100px;
-    height:100px;
+    bottom:-150px;
     background:rgba(255,255,255,0.45);
-    border:2px solid rgba(255,255,255,0.7);
+    border:2px solid rgba(255,255,255,0.8);
     border-radius:50%;
-    animation:float 8s linear infinite;
+    animation:float linear infinite;
+}
+
+.bubbles span:nth-child(1){
+    left:5%;
+    width:80px;
+    height:80px;
+    animation-duration:8s;
+}
+
+.bubbles span:nth-child(2){
+    left:15%;
+    width:120px;
+    height:120px;
+    animation-duration:10s;
+}
+
+.bubbles span:nth-child(3){
+    left:25%;
+    width:70px;
+    height:70px;
+    animation-duration:7s;
+}
+
+.bubbles span:nth-child(4){
+    left:35%;
+    width:140px;
+    height:140px;
+    animation-duration:11s;
+}
+
+.bubbles span:nth-child(5){
+    left:45%;
+    width:90px;
+    height:90px;
+    animation-duration:8s;
+}
+
+.bubbles span:nth-child(6){
+    left:55%;
+    width:110px;
+    height:110px;
+    animation-duration:10s;
+}
+
+.bubbles span:nth-child(7){
+    left:65%;
+    width:75px;
+    height:75px;
+    animation-duration:7s;
+}
+
+.bubbles span:nth-child(8){
+    left:75%;
+    width:130px;
+    height:130px;
+    animation-duration:12s;
+}
+
+.bubbles span:nth-child(9){
+    left:85%;
+    width:90px;
+    height:90px;
+    animation-duration:8s;
+}
+
+.bubbles span:nth-child(10){
+    left:95%;
+    width:110px;
+    height:110px;
+    animation-duration:10s;
 }
 
 @keyframes float{
     0%{
-        transform:translateY(100vh);
+        transform:translateY(0);
         opacity:0;
     }
+
     20%{
         opacity:1;
     }
+
     100%{
-        transform:translateY(-200px);
+        transform:translateY(-120vh);
         opacity:0;
     }
 }
-
-.bubbles span:nth-child(1){left:5%; animation-duration:5s;}
-.bubbles span:nth-child(2){left:15%; width:120px;height:120px; animation-duration:7s;}
-.bubbles span:nth-child(3){left:25%; animation-duration:6s;}
-.bubbles span:nth-child(4){left:35%; width:140px;height:140px; animation-duration:8s;}
-.bubbles span:nth-child(5){left:45%; animation-duration:5s;}
-.bubbles span:nth-child(6){left:55%; width:110px;height:110px; animation-duration:7s;}
-.bubbles span:nth-child(7){left:65%; animation-duration:6s;}
-.bubbles span:nth-child(8){left:75%; width:130px;height:130px; animation-duration:8s;}
-.bubbles span:nth-child(9){left:85%; animation-duration:5s;}
-.bubbles span:nth-child(10){left:95%; width:120px;height:120px; animation-duration:7s;}
 
 /* เมนู */
 nav{
@@ -94,7 +158,7 @@ nav{
 
 .logo{
     font-size:28px;
-    font-weight:bold;
+    font-weight:600;
     color:white;
 }
 
@@ -120,12 +184,12 @@ nav ul li a:hover{
 
 .active{
     color:#C2185B;
-    font-weight:bold;
+    font-weight:600;
 }
 
-/* หน้าหลัก */
+/* หน้าแรก */
 .home{
-    height:85vh;
+    min-height:85vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -151,6 +215,12 @@ nav ul li a:hover{
     margin-bottom:20px;
 }
 
+h3{
+    color:#888;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
 h1{
     color:#ff6b9d;
     margin-bottom:10px;
@@ -158,28 +228,22 @@ h1{
 
 h2{
     color:#666;
-    font-weight:500;
     font-size:20px;
-}
-
-h3{
-    color:#999;
-    margin-bottom:10px;
-    font-weight:400;
+    font-weight:500;
 }
 
 h4{
-    margin-top:10px;
     color:#777;
+    margin-top:8px;
     font-weight:400;
 }
 
 .school{
     font-size:22px;
-    margin-top:15px;
-    margin-bottom:25px;
     color:#ff6b9d;
     font-weight:600;
+    margin-top:15px;
+    margin-bottom:25px;
 }
 
 .btn{
@@ -227,6 +291,68 @@ nav ul li{
 .card{
     width:90%;
 }
+
+.profile{
+    width:150px;
+    height:150px;
 }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<nav>
+    <div class="logo">Portfolio</div>
+
+    <ul>
+        <li><a href="index.html" class="active">หน้าหลัก</a></li>
+        <li><a href="personal.html">ประวัติส่วนตัว</a></li>
+        <li><a href="education.html">ประวัติการศึกษา</a></li>
+        <li><a href="activities.html">ผลงานและกิจกรรม</a></li>
+        <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+
+    <div class="card">
+
+        <img src="Images/profile.jpg" alt="รูปโปรไฟล์" class="profile">
+
+        <h3>Welcome to my portfolio</h3>
+
+        <h1>ธนพล บูชา</h1>
+
+        <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+
+        <h4>แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์</h4>
+
+        <p class="school">โรงเรียนพานทอง</p>
+
+        <a href="personal.html" class="btn">ดูประวัติส่วนตัว</a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Portfolio | Thanaphon Boocha
+</footer>
+
 </body>
-   </style>
+</html>
