@@ -1,1 +1,296 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Portfolio | Activities</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#F8FBFF,#DCEEFF);
+    color:#333;
+}
+
+/* Navbar */
+
+nav{
+    background:#3B82F6;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:#DBEAFE;
+}
+
+.active{
+    color:#DBEAFE;
+    font-weight:700;
+}
+
+/* Header */
+
+.header{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+.header h1{
+    font-size:65px;
+    color:#2563EB;
+}
+
+.header p{
+    color:#666;
+    font-size:24px;
+}
+
+/* Section */
+
+.section-title{
+    text-align:center;
+    color:#2563EB;
+    margin:40px 0 30px;
+    font-size:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(37,99,235,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#2563EB;
+    margin-bottom:10px;
+}
+
+.year{
+    color:#666;
+    font-size:15px;
+    margin-bottom:12px;
+}
+
+.card-content p{
+    line-height:1.8;
+}
+
+/* Footer */
+
+footer{
+    background:#3B82F6;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:60px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+    margin-top:10px;
+}
+
+.header h1{
+    font-size:45px;
+}
+
+.section-title{
+    font-size:30px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">Portfolio</div>
+
+    <ul>
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="personal.html">ประวัติส่วนตัว</a></li>
+        <li><a href="education.html">ประวัติการศึกษา</a></li>
+        <li><a href="activities.html" class="active">ผลงานและกิจกรรม</a></li>
+        <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
+    </ul>
+
+</nav>
+
+<div class="header">
+    <h1>🏆 Activities & Achievements</h1>
+    <p>ผลงานและกิจกรรม</p>
+</div>
+
+<!-- กิจกรรม -->
+
+<h2 class="section-title">📸 กิจกรรมที่เคยเข้าร่วม</h2>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="Images/activity1.jpg" alt="">
+            <div class="card-content">
+                <h3>🏃 พานทองเกมส์ 2568</h3>
+                <div class="year">ปีการศึกษา 2568</div>
+                <p>
+                เข้าร่วมกิจกรรมกีฬาสี "พานทองเกมส์ 2568"
+                เพื่อส่งเสริมสุขภาพ ความสามัคคี
+                และการทำงานร่วมกันเป็นทีม
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Images/activity2.jpg" alt="">
+            <div class="card-content">
+                <h3>⚡ ศึกษาดูงานโรงไฟฟ้าบางปะกง</h3>
+                <div class="year">ปีการศึกษา 2569</div>
+                <p>
+                เข้าร่วมกิจกรรมเปิดโลกการเรียนรู้
+                พลังแห่งอนาคต ศึกษาดูงานโรงไฟฟ้าบางปะกง
+                เพื่อเรียนรู้ด้านพลังงานและเทคโนโลยี
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Images/activity3.jpg" alt="">
+            <div class="card-content">
+                <h3>🙏 ทอดผ้าป่าเพื่อการศึกษา</h3>
+                <div class="year">ปีการศึกษา 2569</div>
+                <p>
+                เข้าร่วมพิธีทอดผ้าป่าเพื่อการศึกษา
+                โรงเรียนพานทอง
+                เพื่อส่งเสริมคุณธรรมและการมีส่วนร่วม
+                ในกิจกรรมของโรงเรียน
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ผลงาน -->
+
+<h2 class="section-title">🏅 ผลงานและเกียรติบัตร</h2>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="Images/certificate1.jpg" alt="">
+            <div class="card-content">
+                <h3>🥇 งานศิลปหัตถกรรมนักเรียน ครั้งที่ 70</h3>
+                <div class="year">ปีการศึกษา 2565</div>
+                <p>
+                การประกวดภาพยนตร์สั้น ระดับชั้น ม.1–ม.3
+                ได้รับรางวัลระดับเหรียญทองชนะเลิศ
+                แสดงถึงความคิดสร้างสรรค์
+                และการทำงานเป็นทีม
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Images/certificate2.jpg" alt="">
+            <div class="card-content">
+                <h3>💻 Thailand MOOC</h3>
+                <div class="year">พ.ศ. 2568</div>
+                <p>
+                ผ่านการอบรมและการเรียนรู้ออนไลน์
+                ผ่านระบบ Thailand Massive Open Online Course
+                (ThaiMOOC)
+                เพื่อพัฒนาความรู้และทักษะการเรียนรู้ด้วยตนเอง
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Portfolio | Thanaphon Boocha
+</footer>
+
+</body>
+</html>
